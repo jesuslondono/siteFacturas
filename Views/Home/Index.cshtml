@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Prueba Sodexo";
+    string[] tableHeaders = new string[]
+    {
+        "Id FACTURA",
+        "Numero Factura",
+        "Fecha",
+        "Tipo de Pago",
+        "Documento Cliente",
+        "Nombre Cliente",
+        "Subtotal",
+        "Descuento",
+        "IVA",
+        "Total Descuento",
+        "Total Impuesto",
+        "TOTAL"
+    };
+}
+
+<div class="text-center">
+    <h1 class="display-4">Prueba Sodexo</h1>
+    <p>Listado de facturas</p>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    @{
+                        foreach (var h in tableHeaders)
+                        {
+                            <th>
+                                @h
+                            </th>
+                        }
+                    }
+                </tr>
+            </thead>
+            @{
+                if (Model != null)
+                {
+                    foreach (var f in Model)
+                    {
+                        <tr>
+                            <td>@f.IDFACTURA</td>
+                            <td>@f.NUMEROFACTURA</td>
+                            <td>@f.FECHA</td>
+                            <td>@f.TIPODEPAGO</td>
+                            <td>@f.DOCUMENTOCLIENTE</td>
+                            <td>@f.NOMBRECLIENTE</td>
+                            <td>@f.SUBTOTAL</td>
+                            <td>@f.DESCUENTO</td>
+                            <td>@f.IVA</td>
+                            <td>@f.TOTALDESCUENTO</td>
+                            <td>@f.TOTALIMPUESTO</td>
+                            <td>@f.TOTAL</td>
+                        </tr>
+                    }
+                }
+            }
+
+        </table>
+    </div>
+</div>

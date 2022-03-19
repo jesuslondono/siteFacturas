@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\wsFacturas\Models\AuthenticateResponse.cs" Link="Models\AuthenticateResponse.cs" />
+    <Compile Include="..\wsFacturas\Models\Entities\Factura.cs" Link="Models\Factura.cs" />
+    <Compile Include="..\wsFacturas\Models\Entities\User.cs" Link="Models\User.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>
